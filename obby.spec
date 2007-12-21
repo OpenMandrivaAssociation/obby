@@ -13,6 +13,7 @@ Source0:    http://releases.0x539.de/%{name}/%{name}-%{version}.tar.bz2
 Group:      System/Libraries
 BuildRequires: sigc++2.0-devel gmpxx-devel
 BuildRequires: libnet6-devel howl-devel
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %description 
 %{libname} is a library which provides synced document buffers. It supports
 multiple documents in one session and is portable to both Windows and
