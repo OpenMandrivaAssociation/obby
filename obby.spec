@@ -1,14 +1,14 @@
 %define name   obby  
 %define major   0.4
 %define libname %mklibname obby %major
-%define libname_devel %mklibname obby %major -d
+%define libname_devel %mklibname obby -d
 
 Summary:    A library which provides synced document buffers
 Name:       %{name}
 Version:    0.4.4
-Release:    %mkrel 1
+Release:    %mkrel 2
 URL:        http://gobby.0x539.de/
-License:    GPL
+License:    GPLv2+
 Source0:    http://releases.0x539.de/%{name}/%{name}-%{version}.tar.bz2
 Group:      System/Libraries
 BuildRequires: sigc++2.0-devel gmpxx-devel
@@ -33,6 +33,7 @@ Summary:    Development files for %libname
 Group:      System/Libraries
 Provides:   lib%{name}-devel
 Requires:   %libname = %version
+Obsoletes:  %mklibname -d obby 0.4
 %description -n %libname_devel
 Development files, header and includes for %libname.
 
