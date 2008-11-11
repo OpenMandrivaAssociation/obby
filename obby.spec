@@ -1,6 +1,7 @@
 %define name   obby  
-%define major   0.4
-%define libname %mklibname obby %major
+%define api 0.4
+%define major   1
+%define libname %mklibname obby %api %major
 %define libname_devel %mklibname obby -d
 
 Summary:    A library which provides synced document buffers
@@ -14,6 +15,7 @@ Group:      System/Libraries
 BuildRequires: sigc++2.0-devel gmpxx-devel
 BuildRequires: libnet6-devel howl-devel
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+
 %description 
 %{libname} is a library which provides synced document buffers. It supports
 multiple documents in one session and is portable to both Windows and
@@ -22,6 +24,7 @@ Unix-like platforms.
 %package -n %libname
 Summary:    A library to ease the development of network-based applications
 Group:      System/Libraries
+Obsoletes:  %mklibname obby 0.4
 
 %description -n %libname
 %{libname} is a library which provides synced document buffers. It supports
@@ -42,7 +45,7 @@ Development files, header and includes for %libname.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure --with-zeroconf --enable-ipv6
+%configure2_5x --with-zeroconf --enable-ipv6
 %make
 
 %install
@@ -65,7 +68,7 @@ rm -Rf $RPM_BUILD_ROOT
 %files -n %libname
 %defattr(-,root,root,-)
 %doc ChangeLog README TODO NEWS AUTHORS 
-%_libdir/*.so.*
+%_libdir/*-%{api}.so.%{major}*
 
 %files -n %libname_devel
 %defattr(-,root,root,-)
