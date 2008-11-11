@@ -5,8 +5,8 @@
 
 Summary:    A library which provides synced document buffers
 Name:       %{name}
-Version:    0.4.5
-Release:    %mkrel 3
+Version:    0.4.6
+Release:    %mkrel 1
 URL:        http://gobby.0x539.de/
 License:    GPLv2+
 Source0:    http://releases.0x539.de/%{name}/%{name}-%{version}.tar.gz
@@ -31,9 +31,10 @@ Unix-like platforms.
 %package -n %libname_devel
 Summary:    Development files for %libname
 Group:      System/Libraries
-Provides:   lib%{name}-devel
+Provides:   lib%{name}-devel = %version-%release
 Requires:   %libname = %version
 Obsoletes:  %mklibname -d obby 0.4
+
 %description -n %libname_devel
 Development files, header and includes for %libname.
 
