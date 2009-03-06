@@ -6,7 +6,7 @@
 
 Summary:    A library which provides synced document buffers
 Name:       %{name}
-Version:    0.4.6
+Version:    0.4.7
 Release:    %mkrel 1
 URL:        http://gobby.0x539.de/
 License:    GPLv2+
