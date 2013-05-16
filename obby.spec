@@ -14,7 +14,7 @@ Source0:    http://releases.0x539.de/%{name}/%{name}-%{version}.tar.gz
 Group:      System/Libraries
 BuildRequires: pkgconfig(sigc++-2.0)
 BuildRequires: gmpxx-devel
-BuildRequires: libnet6-devel
+BuildRequires: pkgconfig(net6-1.3)
 BuildRequires: pkgconfig(howl)
 
 %description 
