@@ -8,7 +8,7 @@ Summary:    A library which provides synced document buffers
 Name:       %{name}
 Version:    0.4.8
 Release:    3
-URL:        http://gobby.0x539.de/
+URL:        https://gobby.0x539.de/
 License:    GPLv2+
 Source0:    http://releases.0x539.de/%{name}/%{name}-%{version}.tar.gz
 Group:      System/Libraries
